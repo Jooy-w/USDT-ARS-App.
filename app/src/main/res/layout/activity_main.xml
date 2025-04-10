@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/label_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precios de Compra (BUY)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_buy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/label_sell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precios de Venta (SELL)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_sell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/price_chart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/alert_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Establecer alerta de precio"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/set_alert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Establecer Alerta"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+</ScrollView>
